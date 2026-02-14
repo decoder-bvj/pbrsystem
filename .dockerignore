@@ -1,0 +1,12 @@
+pbr_venv
+venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.env
+env/
+.git
+.gitignore
+staticfiles
+media

@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}PBR Dashboard{% endblock %}</title>
+
+    {% include "html/components/links.html" %}
+
+    {% block extra_head %}{% endblock %}
+</head>
+
+<body>
+
+    <div class="wrapper d-flex">
+        <!-- Top Navigation -->
+        <header>
+            {% include "html/components/topnav.html" %}
+        </header>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            {% include "html/components/sidenav.html" %}
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="main-content flex-grow-1 d-flex flex-column">
+
+
+
+            <!-- Page Content -->
+            <main class="container-fluid py-4" id="main-content">
+
+                {% block content %}
+                <!-- Default Dashboard View -->
+                <div class="glass-card mb-4">
+                    <div class="card-body text-center">
+                        <h1 class="text-light">Welcome to the Dashboard</h1>
+                    </div>
+                    <div>
+                        <button class="btn-forest">Forest Action</button>
+                        <button class="btn-sage">Sage Button</button>
+                        <button class="btn-earth">Earth Button</button>
+                        <button class="btn-peach">Hero Button</button>
+                    </div>
+                </div>
+
+                <div class="glass-card d-none" id="form-container">
+                    <!-- HTMX content will load here -->
+                </div>
+                {% endblock %}
+
+            </main>
+
+        </div>
+
+    </div>
+
+    {% block extra_js %}{% endblock %}
+
+</body>
+
+</html>

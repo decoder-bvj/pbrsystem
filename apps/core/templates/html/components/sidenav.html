@@ -1,0 +1,413 @@
+<div class="side-nav overflow-y-auto">
+    <ul class="nav flex-column ">
+        <li class="nav-item">
+            <a href="#">
+                <i class="fa-solid fa-gauge me-2"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="nav-item">
+            <!-- BMC menu -->
+            <a class="nav-link" href="#bmcMenu" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="bmcMenu" onclick="">
+                <i class="fa-solid fa-building-columns"></i>
+                BMC
+            </a>
+            <!-- bmc submenu -->
+            <div id="bmcMenu" class="collapse">
+                <ul class="nav flex-column ms-3 ">
+                    <li class="nav-item d-flex  ">
+                        <a href="#" class="nav-link">
+                            Select BMC
+                            <span>
+                                <i class="fa fa-caret-down text-light ms-3" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item flex-column">
+            <!-- annuxure menu -->
+            <a class="nav-link" href="#annexMenu" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="annexMenu">
+                <i class="fa-solid fa-file-invoice"></i>
+                Annexure
+            </a>
+            <!-- annex menu -->
+            <div class="collapse" id="annexMenu">
+                <ul class="nav flex-column ms-3">
+                    <li class="nav-item">
+                        <a class="nav-link" hx-get="#" hx-trigger="click" hx-swap="innerHTML"
+                            hx-target="#main-content">
+                            Annexure-1
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" hx-get="#" hx-trigger="click" hx-swap="innerHTML"
+                            hx-target="#main-content">
+                            Annexure-2
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" hx-get="#" hx-trigger="click"
+                            hx-swap="innerHTML" hx-target="#main-content">
+                            Annexure-3
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" hx-get="#" hx-trigger="click" hx-swap="innerHTML"
+                            hx-target="#main-content">
+                            Annexure-4
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" hx-get="#" hx-trigger="click" hx-swap="innerHTML"
+                            hx-target="#main-content">
+                            Annexure-5
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
+            <!-- Flora  -->
+            <a href="#floraMenu" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="floraMenu">
+                <i class="fa-solid fa-seedling me-2"></i>
+                flora
+            </a>
+            <!-- Flora Menu  -->
+            <div class="collapse" id="floraMenu">
+                <ul class="nav flex-column ms-3 ">
+                    <!-- Agrobiodiversity Menu -->
+                    <li class="nav-item">
+                        <a href="#agroFloraMenu" class="nav-link" data-bs-toggle="collapse" role="button"
+                            aria-expanded="false" aria-controls="agroFloraMenu">
+                            Agrobiodiverstiy Flora
+                        </a>
+                    </li>
+                    <!-- Agrobiodiversity Flora Submenu -->
+                    <div class="collapse" id="agroFloraMenu">
+                        <ul class="nav flex-column ms-3">
+                            <li class="nav-item">
+                                <a class="nav-link" hx-get="#" hx-trigger="click"
+                                    hx-swap="innerHTML" hx-target="#main-content">
+                                    Format 1
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a  class="nav-link" hx-get="#" hx-trigger="click"
+                                    hx-swap="innerHTML" hx-target="#main-content">
+                                    Format 2
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a  class="nav-link" hx-get="#" hx-trigger="click"
+                                    hx-swap="innerHTML" hx-target="#main-content">
+                                    Format 3
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a  class="nav-link" hx-get="#" hx-trigger="click"
+                                    hx-swap="innerHTML" hx-target="#main-content">
+                                    Format 4
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Domesticated Flora -->
+                    <li class="nav-item">
+                        <a href="#domesticFlora" class="nav-link" data-bs-toggle="collapse" role="button"
+                            aria-controls="domesticFlora" aria-expanded="false">
+                            Domesticated Flora
+                        </a>
+                    </li>
+                    <!-- Domesticated Flora Submenu -->
+                    <div class="collapse" id="domesticFlora">
+                        <ul class="nav flex-column">
+                            <li class="nav-item ms-3">
+                                <a class="nav-link" hx-get="#" hx-trigger="click"
+                                    hx-swap="innerHTML" hx-target="#main-content">
+                                    Foramt 11
+                                </a>
+                            </li>
+                            <li class="nav-item ms-3">
+                                <a class="nav-link" hx-get="#" hx-trigger="click"
+                                    hx-swap="innerHTML" hx-target="#main-content">
+                                    Foramt 12
+                                </a>
+                            </li>
+                            <li class="nav-item ms-3">
+                                <a class="nav-link" hx-get="#" hx-trigger="click"
+                                    hx-swap="innerHTML" hx-target="#main-content">
+                                    Foramt 13
+                                </a>
+                            </li>
+                            <li class="nav-item ms-3">
+                                <a class="nav-link" hx-get="#" hx-trigger="click"
+                                    hx-swap="innerHTML" hx-target="#main-content">
+                                    Foramt 14
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Aquatic Flora -->
+                    <li class="nav-item">
+                        <a href="#aquticFlora" class="nav-link" data-bs-toggle="collapse" role="button"
+                            aria-controls="aquticFlora" aria-expanded="false">
+                            Aquatic Flora
+                        </a>
+                    </li>
+                    <!-- Aqatic flora submenu -->
+                    <div class="collapse" id="aquticFlora">
+                        <ul class="nav flex-column">
+                            <li class="nav-item ms-3">
+                                <a href="#" class="nav-link" hx-get="#" hx-trigger="click"
+                                    hx-swap="innerHTML" hx-target="#main-content">
+                                    Format 20
+                                </a>
+                            </li>
+                            <li class="nav-item ms-3">
+                                <a href="#" class="nav-link" hx-get="#" hx-trigger="click"
+                                    hx-swap="innerHTML" hx-target="#main-content">
+                                    Format 21
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Wild Flora -->
+                    <li class="nav-item">
+                        <a href="#wildFlora" class="nav-link" data-bs-toggle="collapse" role="button"
+                            aria-controls="wildFlora" aria-expanded="false">
+                            Wild Flora
+                        </a>
+                    </li>
+                    <!-- wild Flora submenu -->
+                    <div class="collapse" id="wildFlora">
+                        <ul class="nav flex-column">
+                            <li class="nav-item ms-3">
+                                <a href="#" class="nav-link" hx-get="#" hx-trigger="click"
+                                    hx-swap="innerHTML" hx-target="#main-content">
+                                    Format 18
+                                </a>
+                            </li>
+                            <li class="nav-item ms-3">
+                                <a href="#" class="nav-link" hx-get="#" hx-trigger="click"
+                                    hx-swap="innerHTML" hx-target="#main-content">
+                                    Format 19
+                                </a>
+                            </li>
+                            <li class="nav-item ms-3">
+                                <a href="#" class="nav-link" hx-get="# hx-trigger="click"
+                                    hx-swap="innerHTML" hx-target="#main-content">
+                                    Format 22
+                                </a>
+                            </li>
+                            <li class="nav-item ms-3">
+                                <a href="#" class="nav-link" hx-get="#" hx-trigger="click"
+                                    hx-swap="innerHTML" hx-target="#main-content">
+                                    Format 23
+                                </a>
+                            </li>
+                            <li class="nav-item ms-3">
+                                <a href="#" class="nav-link" hx-get="#" hx-trigger="click"
+                                    hx-swap="innerHTML" hx-target="#main-content">
+                                    Format 24
+                                </a>
+                            </li>
+                            <li class="nav-item ms-3">
+                                <a href="#" class="nav-link" hx-get="#" hx-trigger="click"
+                                    hx-swap="innerHTML" hx-target="#main-content">
+                                    Format 25
+                                </a>
+                            </li>
+                            <li class="nav-item ms-3">
+                                <a href="#" class="nav-link" hx-get="#" hx-trigger="click"
+                                    hx-swap="innerHTML" hx-target="#main-content">
+                                    Format 26
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Costal Flora -->
+                    <li class="nav-item ">
+                        <a href="#costalFlora" class="nav-link" data-bs-toggle="collapse" role="button"
+                            aria-controls="costalFlora" aria-expanded="false">
+                            Costal Flora
+                        </a>
+                    </li>
+                    <!-- Costal Flroa submenu -->
+                    <div class="collapse" id="costalFlora">
+                        <ul class="nav flex-column">
+                            <li class="nav-items ms-3">
+                                <a href="#" class="nav-link" hx-get="#" hx-trigger="click"
+                                    hx-swap="innerHTML" hx-target="#main-content">
+                                    Format 27A
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Urban Flora -->
+                    <li class="nav-item">
+                        <a href="#urbanFlora" class="nav-link" data-bs-toggle="collapse" role="button"
+                            aria-controls="urbanFlora" aria-expanded="false">
+                            Urban Flora
+                        </a>
+                    </li>
+                    <!-- Urban Flora Submenu -->
+                    <div class="collapse" id="urbanFlora">
+                        <ul class="nav flex-column">
+                            <li class="nav-item ms-3">
+                                <a href="#" class="nav-link" hx-get="#" hx-trigger="click"
+                                    hx-swap="innerHTML" hx-target="#main-content">
+                                    Format 29
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-items">
+            <!-- Fauna menu -->
+            <a href="#faunaMenu" data-bs-toggle="collapse" role="button" aria-controls="faunaMenu"
+                aria-expanded="false">
+                <i class="fa-solid fa-paw me-2"></i>
+                fauna
+            </a>
+            <div class="collapse ms-3" id="faunaMenu">
+                <ul class="nav flex-column ">
+                    <!-- Agrobiodiversity Fauna Menu -->
+                    <li class="nav-item ms-2">
+                        <a href="#agorFauna" class="nav-link" data-bs-toggle="collapse" role="button"
+                            aria-expanded="false" aria-controls="agorFauna">
+                            Agrobiodiverstiy Fauna
+                        </a>
+                    </li>
+                    <!-- Agrobiodiversity Fauna sub menu -->
+                    <div class="collapse" id="agorFauna">
+                        <ul class="nav flex-column">
+                            <li class="nav-item ms-3">
+                                <a href="#" class="nav-link" hx-get="#" hx-trigger="click"
+                                    hx-swap="innerHTML" hx-target="#main-content">
+                                    Format 5
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- domesticated Fauna menu -->
+                    <li class="nav-item ms-2">
+                        <a href="#domesticatedFauna" class="nav-link" data-bs-toggle="collapse" role="button"
+                            aria-expanded="false" aria-controls="domesticatedFauna">
+                            Domesticated Fauna
+                        </a>
+                    </li>
+                    <!-- Domesticated Fauna sub menu -->
+                    <div class="collapse" id="domesticatedFauna">
+                        <ul class="nav flex-column ">
+                            <li class="nav-item ms-3">
+                                <a href="#" class="nav-link" class="nav-link" hx-get="#" hx-trigger="click"
+                                    hx-swap="innerHTML" hx-target="#main-content">
+                                    Format 15
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Aquatic Fauna menu -->
+                    <li class="nav-item ms-2">
+                        <a href="#aquaticFauna" class="nav-link" data-bs-toggle="collapse" role="button"
+                            aria-expanded="false" aria-controls="aquaticFauna">
+                            Aquatic Fauna
+                        </a>
+                    </li>
+                    <!-- Aquatic Fauna Submenu -->
+                    <div class="collapse" id="aquaticFauna">
+                        <ul class="nav flex-column">
+                            <li class="nav-item ms-3">
+                                <a href="#" class="nav-link" hx-get="#" hx-trigger="click"
+                                    hx-swap="innerHTML" hx-target="#main-content">
+                                    Format 16
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Wild Fauna Menu -->
+                    <li class="nav-item ms-2">
+                        <a href="#wildFauna" class="nav-link" data-bs-toggle="collapse" role="button"
+                            aria-controls="wildFauna" aria-expanded="false">
+                            Wild Fauna
+                        </a>
+                    </li>
+                    <!-- Wild Fauna Summenu -->
+                    <div class="collapse" id="wildFauna">
+                        <ul class="nav flex-column">
+                            <li class="nav-item ms-3">
+                                <a href="#" class="nav-link" hx-get="#" hx-trigger="click"
+                                    hx-swap="innerHTML" hx-target="#main-content">
+                                    Format 28
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- costal Fauna menu -->
+                    <li class="nav-item ms-2">
+                        <a href="#costalFauna" class="nav-link" data-bs-toggle="collapse" role="button"
+                            aria-controls="costalFauna" aria-expanded="false">
+                            Costal Fauna
+                        </a>
+                    </li>
+                    <!-- costal Fauna Submenu -->
+                    <div class="collapse" id="costalFauna">
+                        <ul class="nav flex-column">
+                            <li class="nav-item ms-3">
+                                <a href="#" class="nav-link">
+                                    Format 27B
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Urban Fauna Menu -->
+                    <li class="nav-item ms-2">
+                        <a href="#urbanFauna" class="nav-link" data-bs-toggle="collapse" role="button"
+                            aria-controls="urbanFauna" aria-expanded="false">
+                            Urban Fauna
+                        </a>
+                    </li>
+                    <!-- Urban Fauna Submenu  -->
+                    <div class="collapse" id="urbanFauna">
+                        <ul class="nav flex-column">
+                            <li class="nav-item ms-3">
+                                <a href="#" class="nav-link">
+                                    Format 28
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
+            <!-- Settings menu -->
+            <a href="#">
+                <i class="fa-solid fa-gears "></i>
+                Settings
+            </a>
+        </li>
+        <li class="nav-items">
+            <!-- Report menu -->
+            <a href="#">
+                <i class="fa-solid fa-table-list "></i>
+                Reports
+            </a>
+        </li>
+        <hr class="text-white mx-3">
+        <li class="nav-items">
+            <!-- Logout menu -->
+            <a href="#" class="text-light">
+                <i class="fa-solid fa-right-from-bracket me-2"></i>
+                Logout
+            </a>
+        </li>
+    </ul>
+</div>

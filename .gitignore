@@ -1,0 +1,17 @@
+# Virtual Environment
+pbr_venv/
+venv/
+env/
+
+# Python cache
+**/__pycache__/
+*.pyc
+
+# Database
+*.sqlite3
+
+# Static files
+staticfiles/
+
+# OS files
+.DS_Store
