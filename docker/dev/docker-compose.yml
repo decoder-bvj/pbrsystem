@@ -1,0 +1,29 @@
+services:
+  db:
+    image: postgres:15
+    container_name: pbr_postgres_dev
+    environment:
+      - POSTGRES_DB=pbr_dev_db
+      - POSTGRES_USER=pbr_user
+      - POSTGRES_PASSWORD=pbr_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  web:
+    build:
+      context: ../../
+      dockerfile: docker/dev/Dockerfile
+    container_name: pbr_web_dev
+    volumes:
+      - ../../:/app
+    ports:
+      - "8000:8000"
+    env_file:
+      - ../../.env.dev
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:

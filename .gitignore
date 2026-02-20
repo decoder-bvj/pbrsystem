@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Virtual Environment
 pbr_venv/
 venv/
@@ -15,3 +16,79 @@ staticfiles/
 
 # OS files
 .DS_Store
+=======
+# =========================
+# PYTHON
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+*.sqlite3
+
+# =========================
+# DJANGO
+# =========================
+db.sqlite3
+media/
+staticfiles/
+static/
+*.log
+
+# =========================
+# ENV FILES (CRITICAL)
+# =========================
+.env
+.env.*
+.env.dev
+.env.prod
+
+# =========================
+# VIRTUAL ENVIRONMENTS
+# =========================
+venv/
+env/
+pbr_env/
+.venv/
+
+# =========================
+# IDE
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# MACOS
+# =========================
+.DS_Store
+
+# =========================
+# DOCKER
+# =========================
+docker-compose.override.yml
+*.pid
+
+# =========================
+# AWS / PEM KEYS
+# =========================
+*.pem
+*.key
+
+# =========================
+# NODE (if used later)
+# =========================
+node_modules/
+
+# =========================
+# PYTEST / COVERAGE
+# =========================
+.coverage
+htmlcov/
+.pytest_cache/
+
+# =========================
+# MISC
+# =========================
+*.swp
+>>>>>>> 29c3e84 (Initial clean production-ready commit)

@@ -7,6 +7,7 @@ import sys
 def main():
     """Run administrative tasks."""
 <<<<<<< HEAD
+<<<<<<< HEAD
     # os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
     os.environ.setdefault(
     'DJANGO_SETTINGS_MODULE',
@@ -15,6 +16,9 @@ def main():
 =======
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
 >>>>>>> 8356694 (Setup Dockerized Django project and fixed template errors)
+=======
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.dev")
+>>>>>>> 29c3e84 (Initial clean production-ready commit)
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

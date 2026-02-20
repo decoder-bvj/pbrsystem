@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """
 Django settings for config project.
 
@@ -71,6 +72,48 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0']
 
 # Application definition
 
+=======
+import os
+import sys
+import environ
+from pathlib import Path
+
+# 1. Initialize environ
+env = environ.Env(
+    DEBUG=(bool, False)
+)
+
+# 2 . Define BASE_DIR FIRST (3 levels up from config/settings/base.py)
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+
+
+# 3 levels up from config/settings/base.py
+# Add the 'apps' directory to the system path
+sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
+
+# 3. Load the correct .env file
+# This logic checks if ENV_NAME is set, else defaults to .env.dev
+ENV_NAME = os.environ.get("ENV_NAME", "dev")
+env_path = os.path.join(BASE_DIR, f".env.{ENV_NAME}")
+
+if os.path.exists(env_path):
+    environ.Env.read_env(env_path)
+else:
+    # Fallback to standard .env
+    environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
+
+# --- IMPROVED SETTINGS (Pulling from .env) ---
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = env('SECRET_KEY')
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = env('DEBUG')
+
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=[])
+
+# Application definition
+>>>>>>> 29c3e84 (Initial clean production-ready commit)
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -78,6 +121,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     "apps.core",
@@ -89,18 +133,37 @@ INSTALLED_APPS = [
     "apps.fauna",
     'apps.testing',
 >>>>>>> 8356694 (Setup Dockerized Django project and fixed template errors)
+=======
+    
+    # Third Party
+    "crispy_forms",
+    "crispy_bootstrap5",
+    "django_htmx",
+    
+    # Internal Apps (Add yours here)
+    "apps.core",
+>>>>>>> 29c3e84 (Initial clean production-ready commit)
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+<<<<<<< HEAD
+=======
+    "whitenoise.middleware.WhiteNoiseMiddleware", # Added for your static files
+>>>>>>> 29c3e84 (Initial clean production-ready commit)
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
+<<<<<<< HEAD
+=======
+    "django_htmx.middleware.HtmxMiddleware", # Added for your cascading selects
+>>>>>>> 29c3e84 (Initial clean production-ready commit)
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ROOT_URLCONF = "config.urls.urls"
 =======
@@ -108,14 +171,25 @@ ROOT_URLCONF = "config.urls.urls"
 ROOT_URLCONF = "config.urls"
 WSGI_APPLICATION = "config.wsgi.application"
 >>>>>>> 8356694 (Setup Dockerized Django project and fixed template errors)
+=======
+ROOT_URLCONF = "config.urls"
+>>>>>>> 29c3e84 (Initial clean production-ready commit)
 
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
+<<<<<<< HEAD
         "DIRS": [],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
+=======
+        "DIRS": [os.path.join(BASE_DIR, 'templates')], # Added directory
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.debug",
+>>>>>>> 29c3e84 (Initial clean production-ready commit)
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
@@ -126,6 +200,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "config.wsgi.application"
 
+<<<<<<< HEAD
 
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
@@ -191,3 +266,26 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
 >>>>>>> 8356694 (Setup Dockerized Django project and fixed template errors)
+=======
+# Database Configuration using DATABASE_URL from .env
+DATABASES = {
+    "default": env.db(),
+}
+
+# Internationalization
+LANGUAGE_CODE = "en-us"
+TIME_ZONE = "Asia/Kolkata" # Set for your work in Odisha
+USE_I18N = True
+USE_TZ = True
+
+# Static files
+STATIC_URL = "static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+
+# Crispy Forms
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+>>>>>>> 29c3e84 (Initial clean production-ready commit)

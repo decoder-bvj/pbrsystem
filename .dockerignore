@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 pbr_venv
 venv
 __pycache__
@@ -10,3 +11,12 @@ env/
 .gitignore
 staticfiles
 media
+=======
+# .dockerignore
+pbr_env/
+__pycache__/
+*.pyc
+.git/
+.env*
+docker/
+>>>>>>> 29c3e84 (Initial clean production-ready commit)

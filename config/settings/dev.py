@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from .base import *
 
 DEBUG = True
@@ -28,3 +29,14 @@ DATABASES = {
 >>>>>>> 8356694 (Setup Dockerized Django project and fixed template errors)
     }
 }
+=======
+# config/settings/dev.py
+from .base import *
+
+# This tells Django to use the DATABASE_URL we just fixed in .env.dev
+DATABASES = {
+    'default': env.db()
+}
+
+DEBUG = True
+>>>>>>> 29c3e84 (Initial clean production-ready commit)

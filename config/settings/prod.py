@@ -1,5 +1,6 @@
 from .base import *
 <<<<<<< HEAD
+<<<<<<< HEAD
 import os
 
 DEBUG = False
@@ -38,3 +39,43 @@ CSRF_COOKIE_SECURE = True
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 >>>>>>> 8356694 (Setup Dockerized Django project and fixed template errors)
+=======
+
+# 1. Disable Debug for Security
+DEBUG = False
+
+# 2. Allowed Hosts (Pulled from .env.pro)
+# Django will only respond to requests from these addresses
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=[])
+
+# 3. Static Files Strategy
+# Using WhiteNoise's storage ensures files are cached and compressed
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+# 4. Security Headers
+# These prevent common attacks like Clickjacking or XSS
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+X_FRAME_OPTIONS = 'DENY'
+
+# Uncomment these if you are using HTTPS (SSL)
+# SECURE_SSL_REDIRECT = True
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
+
+# 5. Production Logging
+# Sends errors to the console so you can see them via 'docker logs'
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'WARNING',
+    },
+}
+>>>>>>> 29c3e84 (Initial clean production-ready commit)

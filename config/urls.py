@@ -17,9 +17,16 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import include, path
+<<<<<<< HEAD
+=======
+from apps.core.urls import urls
+>>>>>>> 29c3e84 (Initial clean production-ready commit)
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('',include('apps.core.urls.urls')),
+<<<<<<< HEAD
     path('testing/',include('apps.testing.urls.urls')),
+=======
+>>>>>>> 29c3e84 (Initial clean production-ready commit)
 ]

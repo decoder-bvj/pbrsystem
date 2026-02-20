@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}base{% endblock %}</title>
+    
+    {% include 'html/partials/css_link.html' %}
+    
+    {% block css %}{% endblock %}
+</head>
+<body>
+    <h3>hello from the PBR System</h3>
+    {% block content %}
+    {% endblock %}
+</body>
+{% include 'html/partials/script_link.html' %}
+{% block script %}
+{% endblock%}
+</html>
